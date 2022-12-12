@@ -1,0 +1,75 @@
+:root{
+  --swiper-navigation-size: 44px;
+  --swiper-theme-color:var(--rick-and-morty-main-color);
+   --chosen-card: #436669;
+  --header:#ffffff;
+  --footer:#202329;
+  --color-grey:rgb(158, 158, 158);
+  --color-grey-dark: rgb(89, 89, 89);
+  --color-git-pages:#ffffff ;
+  --rick-and-morty-main-color:#00b5cc;
+  --rick-and-morty-main-color-dark: #01a0b4;
+  --rick-and-morty-main-2-color:#b2df28;
+  --rick-and-morty-main-2-color-dark: #93b722;
+  --error: #be2c2c;
+
+
+
+  --blur: rgba(32, 35, 41, 0.67);
+
+  --bg-lighter: #25292f;
+
+  --bg-card-characters: rgb(60 62 68);
+
+  --bg-hover-card-character: #494a50;
+
+  --bg-opacity-poster: rgba(73, 74, 80, 0.8);
+
+  --color-white: rgba(245, 245, 245, 0.96);
+  --color-white-darker: rgb(225, 225, 225);
+
+  //--box-shadow-card:0px 0px 7px 1px rgba(0,0,0,0.36);
+  --box-shadow-card:0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(37, 41, 47, 0.23);
+  --box-shadow-card-hover:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  --outset-box-shadow:-2px -2px 8px rgb(255 255 255),
+  -2px -2px 12px rgb(255 255 255 / 50%), 2px 2px 8px rgb(0 0 0 / 15%),
+  inset 2px 2px 4px rgb(255 255 255 / 10%);
+
+  --male: #1695d9;
+  --female: #c87dd3;
+  --unknown: #c94e73;
+  --genderless: #9dd37d;
+
+  --yellow: #afaf53;
+
+  --robot: #b2b2b2;
+  --animal: #ad5b48;
+  --creature: #b68ae1;
+  --alien: #4ba64b;
+  --humanoid: #a2cbf3;
+  --human: #f3d3a2;
+  --cronenberg: #85b068;
+  --poopybutthole: #b09768;
+  --disease: #68b0a5;
+
+  --colorTitle1: #00b5cc;
+  --colorTitle2: #bddc5f;
+  --colorTitle3: #19a5b7;
+
+  --colorTitle1_2:#b2df28;
+  --colorTitle2_2: #79bdc5;
+  --colorTitle3_2: #bcec2b;
+
+  --colorTitle1_3: #aed92b;
+  --colorTitle2_3: #46bfce;
+  --colorTitle3_3: #a0c924;
+
+  --colorTitle1_4: #0295a8;
+  --colorTitle2_4: #0fc5dc;
+  --colorTitle3_4: #adda22;
+
+  --colorTitle1_5: #51d4e7;
+  --colorTitle2_5: #97e8ef;
+  --colorTitle3_5: #adda22;
+}

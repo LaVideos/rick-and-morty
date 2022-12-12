@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:var(--footer);
+
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: var(--color-grey);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-opacity-poster);
+    border-radius: 10px;
+
+    &:hover {
+      background: var(--bg-lighter);
+    }
+
+    &:active {
+      background: var(--bg-lighter);
+    }
+
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--bg-opacity-poster);
+  }
+
+  ::-webkit-resizer  {
+    background: var(--bg-opacity-poster);
+  }
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

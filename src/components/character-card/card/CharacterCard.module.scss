@@ -1,0 +1,229 @@
+.card-container, .card-data,.full-card-data ,.status-and-gender{
+  display: flex;
+}
+
+.card-data,.full-card-data{
+  justify-content: center;
+}
+
+.card-container {
+  background: var(--bg-card-characters);
+  border-radius: 10px;
+  width: 600px;
+  transition: 300ms ease-in-out;
+  height: 250px;
+  text-decoration: none;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-container-box-shadow{
+  box-shadow: var(--box-shadow-card);
+  margin-bottom: 40px;
+  transition: 500ms ease-in-out;
+}
+
+.status-and-gender{
+  align-items: center;
+}
+
+.img {
+  width: 230px;
+  border-radius: 10px 0 0 10px;
+
+}
+
+.full-card-data,.card-data{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-data {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 370px;
+}
+
+.name,.nameUnhover {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
+
+.nameUnhover{
+  font-size: 40px;
+  transition: 500ms ease-in-out;
+}
+
+.title{
+  animation: color-animation 8s linear infinite;
+  transition: 100ms ease-in-out;
+}
+
+.name{
+  padding-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name-smaller{
+  font-size: 24px;
+}
+
+.name-smallest{
+  font-size: 22px;
+}
+
+
+
+.title-1 {
+  --color-1: var( --colorTitle1);
+  --color-2: var( --colorTitle2);
+  --color-3: var( --colorTitle3);
+}
+
+.title-2 {
+  --color-1: var(--colorTitle1_2);
+  --color-2: var( --colorTitle2_2);
+  --color-3: var(--colorTitle3_2);
+}
+
+.title-3 {
+  --color-1: var(--colorTitle1_3);
+  --color-2: var(--colorTitle2_3);
+  --color-3:var(--colorTitle3_3);
+}
+
+.title-4 {
+  --color-1: var(--colorTitle1_4);
+  --color-2: var(--colorTitle2_4);
+  --color-3: var(--colorTitle3_4);
+}
+
+.title-5 {
+  --color-1:var(--colorTitle3_4);
+  --color-2: var(--colorTitle1_3);
+  --color-3: var( --colorTitle1);
+}
+
+.title-6 {
+  --color-1:var(--colorTitle1_5);
+  --color-2: var(--colorTitle2_5);
+  --color-3: var( --colorTitle3_5);
+}
+
+.title-7 {
+  --color-1:var(--colorTitle2_5);
+  --color-2: var(--colorTitle3_5);
+  --color-3: var( --colorTitle2_4);
+}
+
+.title-8 {
+  --color-1:var(--colorTitle2_3);
+  --color-2: var(--colorTitle3_3);
+  --color-3: var( --colorTitle1_2);
+}
+
+.title-9 {
+  --color-1:var(--colorTitle2_2);
+  --color-2: var(--colorTitle3_4);
+  --color-3: var( --colorTitle2);
+}
+
+.title-10 {
+  --color-1:var(--rick-and-morty-main-2-color-dark);
+  --color-2: var(--rick-and-morty-main-color-dark);
+  --color-3: var( --colorTitle1_4);
+}
+
+.title-11 {
+  --color-1:var(--colorTitle2_3);
+  --color-2: var(--colorTitle3_3);
+  --color-3: var( --colorTitle1_2);
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.card-container:hover{
+  box-shadow: var(--box-shadow-card-hover);
+  background: var(--bg-hover-card-character);
+
+  //background: var(--chosen-card);
+  //436669FF
+}
+
+.location-last-known-box {
+}
+
+.last-known-location, .first-seen-in {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--color-grey);
+  font-weight: 500;
+}
+
+.location-last-known,.location-first-in {
+  font-size: 22px;
+  color: var(--color-white);
+}
+
+
+@media all and (max-width: 1480px) {
+  .card-container {
+    width: 560px;
+    height: 230px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .card-container-box-shadow{
+    margin-bottom: 20px;
+  }
+
+  .img {
+    width: 210px;
+  }
+
+  .card-data {
+    width: 310px;
+  }
+
+  .name,.nameUnhover {
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
+
+  .nameUnhover{
+    font-size: 36px;
+  }
+
+
+  .name-smaller{
+    font-size: 20px;
+  }
+
+  .name-smallest{
+    font-size: 18px;
+  }
+
+  .last-known-location, .first-seen-in {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .location-last-known,.location-first-in {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,484 @@
+.brd {
+  box-shadow: var(--box-shadow-card);
+}
+
+
+.select{
+  color: var(--color-white);
+}
+
+
+.select-box{
+ position: relative;
+  z-index: 3;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.select-button {
+  position: relative;
+  height: 16px;
+  width: 200px;
+  padding: 12px 14px;
+  background-color: var(--bg-lighter);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.options-view-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.selected-value {
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 26px;
+}
+
+.option svg {
+  width: 16px;
+  height: 16px;
+}
+
+.option,
+.label {
+  color: var(--color-white);
+  font-size: 16px;
+
+}
+
+.chevrons {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  padding: 9px 14px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.chevron-up,.chevron-down{
+  position: relative;
+}
+
+.chevron-up{
+  top: 10px;
+}
+
+.chevron-down{
+  bottom: -12px;
+}
+
+.chevrons svg {
+  color: var(--color-white);
+  font-size: 20px;
+  text-align: right;
+}
+
+.options-view-button:checked + .select-button .chevron-up svg {
+  display: none;
+}
+
+.options-view-button:checked + .select-button .chevron-down svg {
+  display: block;
+}
+
+.options-view-button + .select-button .chevron-down svg {
+  display: none;
+}
+
+
+
+.options {
+  position: relative;
+  left: 0;
+  width: 250px;
+}
+
+.options {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  left: 0;
+  width: 298px;
+  margin: 0 auto;
+  background-color: var(--bg-lighter);
+  border-radius: 4px;
+}
+
+.options-view-button:checked ~ .options {
+  box-shadow: var(--box-shadow-card);
+}
+
+.option {
+  position: relative;
+  line-height: 1;
+  transition: 0.3s ease all;
+  z-index: 2;
+}
+
+.option svg {
+  position: absolute;
+  left: 14px;
+  padding: 0;
+  display: none;
+}
+
+.options-view-button:checked ~ .options .option svg {
+  font-size: 40px;
+  display: block;
+  padding: 12px 0;
+}
+
+.label {
+  display: none;
+  padding: 0;
+  margin-left: 27px;
+}
+
+.options-view-button:checked ~ .options .label {
+  display: block;
+  padding: 12px 14px;
+}
+
+.s-c {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.s-c.top {
+  top: 0;
+}
+
+.s-c.bottom {
+  bottom: 0;
+}
+
+input[type="radio"] {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.s-c:hover ~ svg {
+  color: var(--color-white);
+  opacity: 0;
+}
+
+.s-c:hover {
+  height: 100%;
+  z-index: 1;
+}
+
+.s-c.bottom:hover + svg {
+  bottom: -25px;
+  animation: moveup 0.3s ease 0.1s forwards;
+}
+
+.s-c.top:hover ~ svg {
+  top: -25px;
+  animation: movedown 0.3s ease 0.1s forwards;
+}
+
+@keyframes moveup {
+  0% {
+    bottom: -25px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: -25px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.label {
+  transition: 0.3s ease all;
+}
+
+.opt-val {
+  position: absolute;
+  left: 14px;
+  width: 130px;
+  height: 21px;
+  opacity: 0;
+  background-color: var(--bg-lighter);
+  transform: scale(0);
+}
+
+.opt-val-creature{
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.option input[type="radio"]:checked ~ .opt-val {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.option input[type="radio"]:checked ~ svg {
+  top: 0;
+  bottom: auto;
+  opacity: 1;
+  animation: unset;
+}
+
+.option input[type="radio"]:checked ~ svg,
+.option input[type="radio"]:checked ~ .label {
+  color: var(--color-white);
+}
+
+.option input[type="radio"]:checked ~ .label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.options-view-button:not(:checked)
+~ .options
+.option
+input[type="radio"]:checked
+~ .opt-val {
+  top: -30px;
+}
+
+.option:nth-child(1) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--human);
+  border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(1) input[type="radio"]:checked ~ .opt-val {
+  top: -31px;
+}
+
+.option:nth-child(2) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--robot);
+}
+
+.option:nth-child(2) input[type="radio"]:checked ~ .opt-val {
+  top: -71px;
+}
+
+.option:nth-child(3) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--animal);
+}
+
+.option:nth-child(3) input[type="radio"]:checked ~ .opt-val {
+  top: -111px;
+}
+
+.option:nth-child(4) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--alien);
+}
+
+.option:nth-child(4) input[type="radio"]:checked ~ .opt-val {
+  top: -151px;
+}
+
+.option:nth-child(5) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--creature);
+}
+
+.option:nth-child(5) input[type="radio"]:checked ~ .opt-val {
+  top: -191px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--humanoid);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked ~ .opt-val {
+  top: -231px;
+}
+
+.option:nth-child(7) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--cronenberg);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(7) input[type="radio"]:checked ~ .opt-val {
+  top: -271px;
+}
+
+.option:nth-child(8) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--poopybutthole);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(8) input[type="radio"]:checked ~ .opt-val {
+  top: -311px;
+}
+
+.option:nth-child(9) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--disease);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(9) input[type="radio"]:checked ~ .opt-val {
+  top: -351px;
+}
+
+.option:nth-child(10) input[type="radio"]:checked ~ .label:before {
+  background-color: var(--unknown);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(10) input[type="radio"]:checked ~ .opt-val {
+  top: -391px;
+}
+
+.option:nth-child(1) svg {
+  color: var(--human);
+}
+
+.option:nth-child(2) svg {
+  color: var(--robot);
+}
+
+.option:nth-child(3) svg{
+  color: var(--animal);
+}
+
+.option:nth-child(4) svg {
+  color: var(--alien);
+}
+
+.option:nth-child(5) svg {
+  color: var(--creature);
+}
+
+.option:nth-child(6) svg {
+  color: var(--humanoid);
+}
+
+.option:nth-child(7) svg {
+  color: var(--cronenberg);
+}
+
+.option:nth-child(8) svg {
+  color: var(--poopybutthole);
+}
+
+.option:nth-child(9) svg {
+  color: var(--disease);
+}
+
+.option:nth-child(10) svg {
+  color: var(--unknown);
+}
+
+.option-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  transition: 0.3s ease all;
+  z-index: 1;
+  display: none;
+}
+
+.options-view-button:checked ~ .options .option-bg {
+  display: block;
+}
+
+.option:hover .label {
+  color: var(--color-white);
+}
+
+.option:hover svg{
+  color: var(--color-white);
+}
+
+
+
+
+.option:nth-child(1):hover ~ .option-bg {
+  top: 0;
+  background-color: var(--human);
+  border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(2):hover ~ .option-bg {
+  top: 40px;
+  background-color: var(--robot);
+}
+
+.option:nth-child(3):hover ~ .option-bg {
+  top: 80px;
+  background-color: var(--animal);
+}
+
+.option:nth-child(4):hover ~ .option-bg {
+  top: 120px;
+  background-color: var(--alien);
+}
+
+.option:nth-child(5):hover ~ .option-bg {
+  top: 160px;
+  background-color: var(--creature);
+}
+
+.option:nth-child(6):hover ~ .option-bg {
+  top: 200px;
+  background-color: var(--humanoid);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(7):hover ~ .option-bg {
+  top: 240px;
+  background-color: var(--cronenberg);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(8):hover ~ .option-bg {
+  top: 280px;
+  background-color: var(--poopybutthole);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(9):hover ~ .option-bg {
+  top: 320px;
+  background-color: var(--disease);
+  border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(10):hover ~ .option-bg {
+  top: 360px;
+  background-color: var(--unknown);
+  border-radius: 0 0 4px 4px;
+}

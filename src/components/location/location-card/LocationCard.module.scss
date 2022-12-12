@@ -1,0 +1,133 @@
+
+.type-box, .text-container, .card-container, .residents-container,.container,.nameUnhover {
+  display: flex;
+}
+
+.residents-container, .type-box ,.nameUnhover{
+  align-items: center;
+}
+
+.container{
+  flex-direction: column;
+  width: calc(100%/3);
+  background: var(--bg-card-characters);
+  border-radius: 10px;
+  height: 180px;
+  box-shadow: var(--box-shadow-card);
+  padding: 10px;
+  margin: 20px;
+}
+
+
+.nameUnhover{
+  width: 100%;
+  height: 100%;
+}
+
+.name-text-unHover{
+  font-size: 34px;
+}
+
+.name-text-unHover,.name{
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
+
+.infoChoose {
+  z-index: 35;
+  background: var(--chosen-card);
+}
+
+
+.name {
+  font-size: 24px;
+}
+
+.type-box, .dimension-container {
+  padding-left: 10px;
+}
+
+.type-text, .dimension-text {
+  color: var(--color-grey);
+  font-weight: 500;
+}
+
+.type, .dimension {
+  color: var(--color-white-darker);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.img-type {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.location-info-text-container {
+  height: 90%;
+}
+
+.text-container {
+  width: 100%;
+  flex-direction: column;
+}
+
+.residents-container {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+  animation-delay: 100ms;
+  height: 30px;
+}
+
+.residents-container:hover {
+  font-size: 22px;
+  color: var(--rick-and-morty-main-2-color);
+}
+
+.residents-container svg {
+  padding-left: 5px;
+  color: var(--yellow);
+}
+
+.residents-text {
+  font-weight: 500;
+  color: var(--color-white-darker);
+}
+
+.blur{
+  background-color: var(--blur);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 30;
+}
+
+.resident-container{
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.data{
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-grey);
+}
+
+.residents-container-active{
+  font-size: 20px;
+  width: 60%;
+}

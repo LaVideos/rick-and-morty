@@ -1,0 +1,121 @@
+
+.text-container, .card-container, .residents-container,.container {
+  display: flex;
+}
+
+.residents-container{
+  align-items: center;
+}
+
+.infoChoose{
+  z-index: 1235;
+}
+
+.container{
+  //width: calc(90%/3);
+  width: 300px;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 20px;
+  position: relative;
+}
+
+
+.poster{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-card);
+}
+
+.name{
+
+  -webkit-text-stroke: 4px var(--rick-and-morty-main-2-color);
+  color: var(--rick-and-morty-main-2-color);
+
+
+  font-size: 200%;
+  font-weight: 500;
+  letter-spacing: 4px;
+
+}
+
+.data-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.data{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  background: var(--bg-opacity-poster);
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.residents-container {
+  font-size: 20px;
+  width: 30%;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+  animation-delay: 100ms;
+  height: 30px;
+}
+
+.residents-container:hover {
+  width: 40%;
+  color: var(--rick-and-morty-main-2-color);
+}
+
+.residents-container svg {
+  padding-left: 5px;
+  color: var(--yellow);
+}
+
+.residents-text {
+  font-weight: 500;
+  color: var(--color-white-darker);
+}
+
+.blur{
+  background-color: var(--blur);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.resident-container{
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.residents-active-text{
+  border-bottom: 2px solid var(--rick-and-morty-main-color);
+}
+
+.episode{
+  font-weight: 500;
+  font-size: 140%;
+  color: var(--color-white);
+}
+
+.air-date{
+  font-weight: 500;
+  color: var(--color-white);
+}
