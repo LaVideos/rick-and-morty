@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from "classnames/bind";
 import styles from "./MainPage.module.scss";
-import png from '../../assets/png/kisspng-rick-sanchez-morty-smith-pickle-rick-youtube-rick-rick-and-morty-5acb1188dd0a87.2585329315232577369054.png'
+import png from '../../assets/png/pickle.png'
 
 const cn = classNames.bind(styles)
 

@@ -1,4 +1,4 @@
-import s1 from '../assets/jpeg/posters/Rick_and_Morty_Season_1.webp'
+import s1 from '../assets/jpeg/posters/s1.webp'
 import s2 from '../assets/jpeg/posters/s2.jpg'
 import s3 from '../assets/jpeg/posters/s3.jpg'
 import s4 from '../assets/jpeg/posters/s4.jpg'
