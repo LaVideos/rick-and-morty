@@ -67,7 +67,7 @@ const EpisodeComponent = ({card}: EpisodeProps) => {
                     </div>
                 </div>
             </div>
-            {open&&<div style={{width:`${(characters.length*360)*3}px`}} className={cn('blur')}></div>}
+            {open&&<div style={{width:`${(characters.length*460)*4}px`}} className={cn('blur')}></div>}
         </>
 
     );
