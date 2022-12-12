@@ -1,0 +1,98 @@
+.c-form {
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  height: 50px;
+  width: 250px;
+
+  background: var(--color-white);
+  box-shadow: inset 5px 5px 10px #e1e1e1,
+  inset -5px -5px 10px #ffffff;
+
+
+  border-radius: 50px;
+
+  align-items: center;
+  flex-direction: row;
+}
+
+.search{
+  font-size: 25px;
+  padding: 5px;
+  color: var(--rick-and-morty-main-color);
+}
+
+.c-form :disabled{
+cursor: not-allowed;
+}
+
+.c-form__input {
+  width: 100%;
+  border-radius: inherit;
+  height: 100%;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--color-white);
+  box-shadow: inset 5px 5px 10px #e1e1e1,
+  inset -5px -5px 10px #ffffff;
+}
+
+.c-form__input {
+  font-size: 20px;
+}
+
+.c-form__input {
+  color: var(--rick-and-morty-main-2-color-dark);
+  padding: 0 0.714em;
+  width: 100%;
+
+  &::placeholder {
+    color: var(var(--color-white));
+  }
+
+  &:focus:enabled, &:active:enabled {
+    &::placeholder {
+      color: var(--rick-and-morty-main-color);
+      transition: color 0.25s linear;
+    }
+
+  }
+}
+
+.label{
+  position: absolute;
+  color: var(--rick-and-morty-main-color);
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  text-shadow: none;
+
+  font-size: 18px;
+  top: 20px;
+  left: 70px;
+  margin-bottom: 10px;
+}
+
+.container{
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+.container{
+  width: 450px;
+  margin: 20px;
+}
+
+
+.container .inputField {
+  height: 60px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

@@ -1,0 +1,61 @@
+.svg {
+  width: 30px;
+}
+
+.status-text {
+  padding: 5px;
+  color: var(--color-white);
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.small {
+  font-size: 20px;
+}
+
+.medium {
+  font-size: 30px;
+}
+
+.big {
+  font-size: 40px;
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.grey {
+  color: var(--color-grey);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.svg-medium {
+  width: 40px;
+}
+
+.svg-big {
+  width: 50px;
+}
+
+@media all and (max-width: 1480px) {
+  .svg {
+    width: 24px;
+  }
+
+  .small {
+    font-size: 18px;
+  }
+
+  .grey {
+    color: var(--color-grey);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+}

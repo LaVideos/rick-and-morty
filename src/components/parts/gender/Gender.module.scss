@@ -1,0 +1,64 @@
+.gender-box{
+  padding-right:5px;
+  padding-top:5px;
+  box-sizing: border-box;
+}
+
+.small{
+  font-size: 30px;
+}
+
+.medium{
+  font-size: 60px;
+}
+
+.big{
+  font-size: 120px;
+}
+
+.gender-Male svg{
+  color: var(--male);
+}
+.gender-Female svg{
+  color: var(--female);
+}
+.gender-Genderless svg{
+  color: var(--genderless);
+}
+.gender-unknown svg{
+  color: var(--unknown);
+}
+
+.gender-any{
+  color:var(--rick-and-morty-main-2-color)
+}
+
+@media all and (max-width: 1480px) {
+
+  .small{
+    font-size: 40px;
+  }
+
+  .medium{
+    font-size: 80px;
+  }
+
+  .big{
+    font-size: 100px;
+  }
+}
+
+
+@media all and (max-width: 640px) {
+  .small{
+    font-size: 30px;
+  }
+
+  .medium{
+    font-size: 40px;
+  }
+
+  .big{
+    font-size: 50px;
+  }
+}

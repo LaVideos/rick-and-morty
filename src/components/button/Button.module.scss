@@ -1,0 +1,108 @@
+//.load-more-box{
+//  width: 200px;
+//}
+
+.loadMore{
+  background-color:var(--rick-and-morty-main-color);
+  color:#FFF;
+  cursor:pointer;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  opacity:1;
+  text-transform: uppercase;
+  transition: 400ms ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.medium{
+  width:200px;
+  height: 50px;
+  margin:50px auto;
+  font-size: 20px;
+  letter-spacing: 1px;
+  box-shadow:0px 6px 0px var(--rick-and-morty-main-color-dark);
+}
+
+.small{
+  width:100px;
+  height: 15px;
+  margin:50px auto;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  box-shadow:0px 4px 0px var(--rick-and-morty-main-color-dark);
+
+}
+
+.large{
+  width:200px;
+  height: 50px;
+  margin:50px auto;
+  font-size: 28px;
+  letter-spacing: 2px;
+  box-shadow:0px 8px 0px var(--rick-and-morty-main-color-dark);
+}
+
+.large:active{
+  width: 160px;
+  font-size: 24px;
+}
+
+.medium:active{
+  width: 160px;
+}
+
+.small:active{
+  width: 80px;
+  font-size: 13px;
+}
+
+.medium .big-text{
+  font-size: 13px;
+}
+
+.medium .small-text{
+  font-size: 20px;
+}
+
+
+.load-more-text{
+  font-weight: inherit;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: inherit;
+
+
+}
+
+
+
+.small:hover{
+  opacity: 0.9;
+  box-shadow:0px 2px 0px var(--rick-and-morty-main-color-dark);
+}
+
+.large:hover{
+  opacity: 0.9;
+  box-shadow:0px 6px 0px var(--rick-and-morty-main-color-dark);
+}
+
+.medium:hover{
+  opacity: 0.9;
+  box-shadow:0px 4px 0px var(--rick-and-morty-main-color-dark);
+}
+
+.loadMore:active{
+  background: var(--rick-and-morty-main-2-color);
+  box-shadow:0px 4px 0px var(--rick-and-morty-main-2-color-dark);
+}

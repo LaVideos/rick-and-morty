@@ -1,0 +1,62 @@
+.episodes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  padding: 100px 40px 40px;
+}
+
+.episodes-container>div:nth-child(2){
+  background: var(--bg-lighter);
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.episodes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 10px;
+
+  width: 100%;
+  align-items: center;
+
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  background: var(--bg-lighter);
+  border-radius: 10px;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.no-data{
+  font-size: 50px;
+  color: var(--color-grey);
+  font-weight: 700;
+}
+
+
+
+.input-container{
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.season-container{
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.season-container>label{
+  margin: 10px;
+}

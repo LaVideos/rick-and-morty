@@ -1,0 +1,105 @@
+.gender-text{
+  font-weight: 500;
+}
+
+.gender-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-species{
+  font-size: 20px;
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
+
+.small{
+  font-size: 20px;
+}
+
+.medium{
+  font-size: 30px;
+}
+
+.big{
+  font-size: 40px;
+}
+
+.svg-medium svg{
+  font-size: 40px;
+}
+
+.svg-small svg{
+  font-size: 20px;
+}
+
+.svg-big svg{
+  font-size: 50px;
+}
+.white{
+  color: var(--color-white);
+}
+
+.grey{
+  color: var(--color-grey);
+}
+
+.svg-species-Robot svg{
+  color: var(--robot);
+}
+.svg-species-Animal svg{
+  color: var(--animal);
+}
+.svg-species-Mythological svg{
+  color: var(--creature);
+}
+.svg-species-Alien svg{
+  color: var(--alien);
+}
+
+.svg-species-Humanoid svg{
+  color: var(--humanoid);
+}
+.svg-species-Human svg{
+  color: var(--human);
+}
+.svg-species-unknown svg{
+  color: var(--unknown);
+}
+.svg-species-Cronenberg svg{
+  color: var(--cronenberg);
+}
+.svg-species-Poopybutthole svg{
+  color: var(--poopybutthole);
+}
+.svg-species-Disease svg{
+  color: var(--disease);
+}
+
+@media all and (max-width: 1480px) {
+.svg-species{
+  font-size: 18px;
+}
+
+.small{
+  font-size: 18px;
+}
+
+.medium{
+  font-size: 18px;
+}
+
+.big{
+  font-size: 24px;
+}
+
+.svg-medium svg{
+  font-size: 40px;
+}
+
+.svg-small svg{
+  font-size: 20px;
+}
+}
+
