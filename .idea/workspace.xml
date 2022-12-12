@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0549cde-853a-4678-9c14-0250370faa2f" name="Changes" comment="pre_rel">
+    <list default="true" id="d0549cde-853a-4678-9c14-0250370faa2f" name="Changes" comment="not found page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="not-found-page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +41,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "C:/Users/lavid/Desktop/rick-and-morty/src/assets/jpeg/posters",
+    "last_opened_file_path": "C:/Users/lavid/Desktop/rick-and-morty/src/assets/png",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,10 +51,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\png" />
       <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\jpeg\posters" />
       <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\gif" />
       <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\png\type" />
-      <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\png" />
       <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\svg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -67,7 +65,7 @@
       <recent name="C:\Users\lavid\Desktop\rick-and-morty\src\assets\png" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -87,6 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -108,6 +107,21 @@
       <workItem from="1670798869300" duration="8199000" />
       <workItem from="1670807334537" duration="728000" />
     </task>
+    <task id="LOCAL-00001" summary="not found page">
+      <created>1670844542263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670844542263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="not found page">
+      <created>1670844691314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670844691314</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pre_rel" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre_rel" />
+    <MESSAGE value="not found page" />
+    <option name="LAST_COMMIT_MESSAGE" value="not found page" />
   </component>
 </project>
