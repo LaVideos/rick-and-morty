@@ -68,9 +68,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -o docs-build -s public",
-    "deploy": "gh-pages -d docs-build",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
@@ -124,5 +122,17 @@
     "prop-types": "^15.8.1",
     "redux-devtools": "^3.7.0",
     "webpack": "^4.19.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaVideos/rick-and-morty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaVideos/rick-and-morty/issues"
   }
 }
