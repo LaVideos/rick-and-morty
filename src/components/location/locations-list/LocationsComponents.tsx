@@ -8,7 +8,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import {Button, Loading, Radio, ResponsePopup} from "../../index";
 import Input from "../../input/Input";
 import {useForm} from "react-hook-form";
-import {episodesAction, locationAction} from "../../../redux";
+import {locationAction} from "../../../redux";
 import {locationTypeFoo} from "../../../utils";
 import {dimension, type} from "../../../constants";
 import {BsChevronDown, BsChevronUp} from "react-icons/bs";
@@ -21,18 +21,18 @@ const cn = classNames.bind(styles)
 const LocationsComponents = () => {
     const [show, setShow] = useState(false);
     const [showType, setShowType] = useState(false);
+    const [findAll, setFindAll] = useState<boolean>(false);
     const dispatch = useAppDispatch();
     const {locationParams} = useAppSelector(state => state.locations);
     const [showDimension, setShowDimension] = useState(false);
     const {error, fetchNextPage, hasNextPage, status, infinityQuery}
-        = UseCharacter({filterLocation: locationParams?locationParams:{
-            name:"",
-            type:"",
-            dimension:""
-        }, queryKey: 'locations'});
-
-
-    console.log(locationParams)
+        = UseCharacter({
+        filterLocation: locationParams ? locationParams : {
+            name: "",
+            type: "",
+            dimension: ""
+        }, queryKey: 'locations'
+    });
 
     const {
         reset,
@@ -41,7 +41,16 @@ const LocationsComponents = () => {
     } = useForm({mode: "all"});
 
     const submit = async (data: LocationParamsProps) => {
-        await dispatch(locationAction.getLocationParams(data));
+        if (!findAll) {
+            await dispatch(locationAction.getLocationParams(data));
+        } else {
+            await dispatch(locationAction.getLocationParams({
+                name: "",
+                type: "",
+                dimension: ""
+            }));
+            setFindAll(false);
+        }
         reset();
     }
 
@@ -49,15 +58,15 @@ const LocationsComponents = () => {
         status === 'loading' && ResponsePopup.Pending().then();
     }, [dispatch])
 
-    useEffect(()=>{
-        if(!infinityQuery){
+    useEffect(() => {
+        if (!infinityQuery) {
             dispatch(locationAction.getLocationParams({
-                name:"",
-                type:"",
-                dimension:""
+                name: "",
+                type: "",
+                dimension: ""
             }))
         }
-    },[])
+    }, [])
 
 
     return (
@@ -118,7 +127,9 @@ const LocationsComponents = () => {
                                 </div>
                             </div>
 
-                            <Button onclick={() => undefined} text={'Find'} size={'medium'}/>
+                            <div className={cn('button-container')}><Button onclick={() => undefined} text={'Find'}
+                                                                            size={'medium'}/>
+                                <Button onclick={() => setFindAll(true)} text={'Reset'} size={'medium'}/></div>
 
                         </form>
                     }
@@ -140,17 +151,17 @@ const LocationsComponents = () => {
                     justifyContent: 'center',
                 }}>
 
-                    {status==='loading'&&<Loading/>}
-                    {error&& <Error/>}
-                    {error&&<div className={cn('no-data')}>
+                    {status === 'loading' && <Loading/>}
+                    {error && <Error/>}
+                    {error && <div className={cn('no-data')}>
                         No Data ...
                     </div>}
 
 
                     {
 
-                    infinityQuery && infinityQuery.results.map((value: LocationProps) =>
-                        <LocationCard key={value.id} card={value}/>)}</div>
+                        infinityQuery && infinityQuery.results.map((value: LocationProps) =>
+                            <LocationCard key={value.id} card={value}/>)}</div>
 
                 {hasNextPage && <Button size={'medium'} text={'Load More'} onclick={() =>
                     fetchNextPage()

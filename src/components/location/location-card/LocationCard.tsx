@@ -63,7 +63,7 @@ export const LocationCard = ({card}: LocationCardProps) => {
                         </>
                         }
                     </div>
-                    <img className={cn('img-type')} src={locationTypeFoo(type)} alt=""/>
+                    <div className={cn('img-container')}><img className={cn('img-type')} src={locationTypeFoo(type)} alt=""/></div>
                 </div>
                 {open &&
                     <span className={cn('resident-container')}>

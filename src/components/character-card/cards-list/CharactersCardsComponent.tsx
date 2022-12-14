@@ -17,7 +17,8 @@ const cn = classNames.bind(styles)
 export const CharactersCardsComponent = () => {
 
     const {charactersParams} = useAppSelector(state => state.characters);
-    const [show,setShow] = useState(false);
+    const [show,setShow] = useState<boolean>(false);
+    const [findAll,setFindAll] = useState<boolean>(false);
 
     const dispatch = useAppDispatch();
 
@@ -54,7 +55,18 @@ export const CharactersCardsComponent = () => {
     } = useForm({mode: "all"});
 
     const submit =async (data: ParamsProps) => {
-        await dispatch(charactersAction.getCharacterParams(data));
+       if(!findAll){
+           await dispatch(charactersAction.getCharacterParams(data));
+       }else{
+           await dispatch(charactersAction.getCharacterParams({name:"",
+               status:"",
+               species:"",
+               type:"",
+               gender:"",
+               location:"",
+               origin:""}))
+           setFindAll(false)
+       }
         reset();
     }
 
@@ -117,7 +129,8 @@ export const CharactersCardsComponent = () => {
 
                     </div>
 
-                    <Button onclick={()=>undefined} text={'Find'} size={'medium'}/>
+                    <div className={cn('button-container')}><Button onclick={() => undefined} text={'Find'} size={'medium'}/>
+                        <Button onclick={() => setFindAll(true)} text={'Reset'} size={'medium'}/></div>
 
                 </form>}
 
@@ -131,15 +144,7 @@ export const CharactersCardsComponent = () => {
                     refreshFunction={()=>submit}
                     className={cn('scroll')}
                 >
-                    <div style={{
-                        // width: '84vw',
-                        // minHeight:'400px',
-                        // overflow: 'auto',
-                        // display: 'flex',
-                        // flexWrap: "wrap",
-                        // justifyContent: 'space-between',
-                        // padding: '20px'
-                    }}>
+                    <div>
 
                         {status==='loading'&&<Loading/>}
                         {

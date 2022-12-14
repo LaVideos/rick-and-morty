@@ -7,7 +7,7 @@ import {Button, EpisodeComponent, Radio, ResponsePopup} from "../../index";
 import Input from "../../input/Input";
 import {useForm} from "react-hook-form";
 import {UseCharacter} from "../../../hooks/use-character";
-import {charactersAction, episodesAction} from "../../../redux";
+import {episodesAction} from "../../../redux";
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux-hooks";
 import {EpisodeParamsProps} from "../../../interfaces/ParamsProps";
 import Loading from "../../loading/Loading";
@@ -19,13 +19,14 @@ const cn = classNames.bind(styles)
 
 const EpisodesComponent = () => {
     const dispatch = useAppDispatch();
+    const [findAll,setFindAll] = useState<boolean>(false);
     let {params_,episodes_} = useAppSelector(state => state.episodes);
     const {error, fetchNextPage, hasNextPage, status,infinityQuery}
         = UseCharacter({filterEpisodes:params_?params_:{name:"",
             episode:''
         },queryKey:'episodes'})
     const [show,setShow] = useState(false);
-
+    
     const {
         reset,
         register,
@@ -33,16 +34,20 @@ const EpisodesComponent = () => {
     } = useForm({mode: "all"});
 
     const submit = async (data: EpisodeParamsProps) => {
-        if(data.name&&!data.episode){
+        if(!findAll){
+            if(data.name&&!data.episode){
+                dispatch(episodesAction.setUndefined());
+                dispatch(episodesAction.getEpisodesParams(data));
+            }else if(!data.name&&data.episode) {
+                await dispatch(episodesAction.getEpisodesById(data.episode));
+            }
+        }else {
             dispatch(episodesAction.setUndefined());
-            dispatch(episodesAction.getEpisodesParams(data));
-        }else if(!data.name&&data.episode) {
-           await dispatch(episodesAction.getEpisodesById(data.episode));
+            dispatch(episodesAction.getEpisodesParams({name:''}))
+            setFindAll(false);
         }
         reset();
     }
-
-    console.log(params_)
 
     useEffect(() => {
         status === 'loading' && ResponsePopup.Pending().then();
@@ -55,7 +60,7 @@ const EpisodesComponent = () => {
                 episode:''
             }))
         }
-    },[])
+        },[])
 
 
     return (
@@ -78,7 +83,8 @@ const EpisodesComponent = () => {
                             <Radio text={'Season 5'} name={'episode'} value={'42,43,44,45,46,47,48,49,50,51'} register={register}/>
                         </div>
 
-                        <Button onclick={() => undefined} text={'Find'} size={'medium'}/>
+                        <div className={cn('button-container')}><Button onclick={() => undefined} text={'Find'} size={'medium'}/>
+                            <Button onclick={() => setFindAll(true)} text={'Reset'} size={'medium'}/></div>
 
                     </form>
                 }

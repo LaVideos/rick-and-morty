@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import 'animate.css';
 
 import classNames from 'classnames/bind';
@@ -7,12 +7,10 @@ import {useLocation, useParams} from "react-router-dom";
 import {CardProps, EpisodeTypes} from "../../../interfaces";
 import {EpisodeComponent, Gender, Species, Status} from "../../index";
 import {createStrFromArr} from "../../../utils";
-import {useEpisode} from "../../../hooks/use-episode";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Keyboard, Mousewheel, Navigation, Pagination} from "swiper";
-import {useAppSelector} from "../../../hooks/redux-hooks";
-import {useDispatch} from "react-redux";
-import {charactersAction} from "../../../redux";
+import {useAppDispatch, useAppSelector} from "../../../hooks/redux-hooks";
+import {episodesAction} from "../../../redux";
 
 const cn = classNames.bind(styles)
 
@@ -22,18 +20,13 @@ const AllCharacterDataComponent = () => {
     const {state} = useLocation();
     let characterData:CardProps;
     characterData = state;
-    const {needReload} = useAppSelector(state1 => state1.characters);
-    const dispatch = useDispatch();
+    const {episodes_} = useAppSelector(state1 => state1.episodes);
+    const dispatch = useAppDispatch();
 
     const {episode,location,image,name,origin,species,status,type,gender} = characterData;
 
-    const {data,status:statusEpisode,isFetching,isFetchingNextPage,hasNextPage,fetchNextPage,error,episodes} = useEpisode(createStrFromArr(episode,39));
-
     useEffect(()=>{
-        if(needReload){
-            window.location.reload();
-            dispatch(charactersAction.getAccessToReload(false));
-        }
+        dispatch(episodesAction.getEpisodesById(createStrFromArr(episode,39)))
     },[id])
 
     return (
@@ -70,7 +63,7 @@ const AllCharacterDataComponent = () => {
                     keyboard={true}
                     modules={[ Navigation, Pagination, Mousewheel, Keyboard]} className='mySwiper'>
                     {
-                        episodes&&episodes.map((value:EpisodeTypes )=>
+                        episodes_&&episodes_.map((value:EpisodeTypes )=>
                             <SwiperSlide key={value.id} style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%'}}>
                             <EpisodeComponent card={value}/>
                             </SwiperSlide>

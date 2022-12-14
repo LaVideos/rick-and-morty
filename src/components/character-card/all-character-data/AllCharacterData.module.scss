@@ -1,13 +1,13 @@
+.character-all-data,.text-data,.status-species-box {
+  display: flex;
+}
+
 
 .container-card {
   margin: 40px;
   background: var(--bg-lighter);
   padding: 20px;
   border-radius: 20px;
-}
-
-.character-all-data {
-  display: flex;
 }
 
 .img {
@@ -38,7 +38,6 @@
   background: var(--bg-hover-card-character);
   border-radius: 20px;
   margin-left: 20px;
-  display: flex;
   justify-content: space-between;
   box-shadow: var(--box-shadow-card);
 
@@ -50,9 +49,6 @@
   font-weight: 500;
 }
 
-.status-species-box {
-  display: flex;
-}
 
 .info {
   color: var(--color-grey);

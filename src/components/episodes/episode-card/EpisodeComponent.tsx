@@ -5,6 +5,7 @@ import styles from './Episode.module.scss'
 import {seasonFoo} from "../../../utils";
 import {Residents} from "../../index";
 import {FaFolder, FaFolderOpen} from "react-icons/fa";
+import {useLocation} from "react-router-dom";
 
 const cn = classNames.bind(styles)
 
@@ -16,6 +17,8 @@ const EpisodeComponent = ({card}: EpisodeProps) => {
 
     const {id, episode, url, created, name, characters, air_date} = card;
 
+    const {pathname,state} = useLocation();
+
     const [open,setOpen] = useState(false);
     const [hover,setHover] = useState(false);
 
@@ -23,10 +26,11 @@ const EpisodeComponent = ({card}: EpisodeProps) => {
         open&&setHover(true);
     },[hover])
 
+    useEffect(()=>{
+        pathname.includes('id')&&setOpen(false)
+    },[pathname])
+
     useEffect(()=>{},[card])
-
-
-
 
 
     return (

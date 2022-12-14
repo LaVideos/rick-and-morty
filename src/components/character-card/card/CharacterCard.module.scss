@@ -1,9 +1,18 @@
-.card-container, .card-data,.full-card-data ,.status-and-gender{
+.card-container, .card-data,.full-card-data ,.status-and-gender,.name{
   display: flex;
 }
 
 .card-data,.full-card-data{
   justify-content: center;
+}
+
+.full-card-data,.card-data{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.status-and-gender{
+  align-items: center;
 }
 
 .card-container {
@@ -24,19 +33,12 @@
   transition: 500ms ease-in-out;
 }
 
-.status-and-gender{
-  align-items: center;
-}
+
 
 .img {
   width: 230px;
   border-radius: 10px 0 0 10px;
 
-}
-
-.full-card-data,.card-data{
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .card-data {
@@ -65,7 +67,6 @@
 
 .name{
   padding-bottom: 5px;
-  display: flex;
   flex-wrap: wrap;
 }
 

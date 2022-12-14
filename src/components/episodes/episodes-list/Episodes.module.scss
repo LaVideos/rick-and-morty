@@ -1,10 +1,33 @@
-.episodes-container {
+
+.episodes-container,.episodes,.form-container,.input-container,.season-container,.button-container{
   display: flex;
+}
+
+.episodes-container,.episodes,.form-container{
   flex-wrap: wrap;
+}
+
+.episodes-container,.episodes,.form-container,.input-container{
   justify-content: center;
-  justify-items: center;
+}
+
+.input-container,.episodes-container,.episodes,.form-container,.season-container{
+  align-items: center;
+}
+
+.form-container,.episodes{
+  width: 100%;
+}
+
+.episodes-container {
   padding: 100px 40px 40px;
 }
+
+.episodes,.form-container{
+  border-radius: 10px;
+}
+
+
 
 .episodes-container>div:nth-child(2){
   background: var(--bg-lighter);
@@ -13,27 +36,10 @@
   margin-top: 50px;
 }
 
-.episodes{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  border-radius: 10px;
-
-  width: 100%;
-  align-items: center;
-
-}
 
 .form-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
   background: var(--bg-lighter);
-  border-radius: 10px;
   flex-direction: column;
-  width: 100%;
   align-items: center;
 }
 
@@ -43,17 +49,7 @@
   font-weight: 700;
 }
 
-
-
-.input-container{
-display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .season-container{
-  display: flex;
-  align-items: center;
   padding-top: 20px;
 }
 

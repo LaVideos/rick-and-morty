@@ -1,6 +1,10 @@
+.location-container{
+  display: flex;
+
+}
+
 .location-container {
   padding: 100px 40px 40px;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +31,7 @@
 .filter-input-container{
   width: 30%;
   position: relative;
-  left: -5px;
+  left: -10px;
 }
 
 .type-container{
@@ -83,16 +87,12 @@
 
 }
 
-
-.radio-container-location-type{
-}
-
-.radio-container-location-type>span{
-
-}
-
 .form{
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .radio-container-data{
@@ -110,4 +110,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.button-container{
+  width: 50%;
+  display: flex;
 }
